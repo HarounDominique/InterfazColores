@@ -16,10 +16,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
+             <!--
             <ScrollBar fx:id="ScrollBarRojo" onDragDetected="#cambiarValorScrollBarRojo" orientation="VERTICAL" value="100.0">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets></ScrollBar>
+               -->
             <ScrollBar fx:id="ScrollBarVerde" orientation="VERTICAL" value="100.0" GridPane.columnIndex="1" />
             <ScrollBar fx:id="ScrollBarAzul" orientation="VERTICAL" value="100.0" GridPane.columnIndex="2" />
          </children>
@@ -46,19 +48,19 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #000000;" text="negro" textAlignment="CENTER" textFill="WHITE" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #585858;" text="gris oscuro" textFill="WHITE" GridPane.rowIndex="1" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #848484;" text="gris" textFill="WHITE" GridPane.rowIndex="2" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #D5D5D5;" text="gris claro" GridPane.rowIndex="3" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="blanco" GridPane.rowIndex="4" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #FF66FF;" text="magenta" GridPane.rowIndex="5" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0033FF F;" text="azul" textFill="WHITE" GridPane.rowIndex="6" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0099FF;" text="cian" GridPane.rowIndex="7" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #33CC00;" text="verde" GridPane.rowIndex="8" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #FFCC00;" text="amarillo" GridPane.rowIndex="9" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="74.0" style="-fx-background-color: #FF9900;" text="naranja" GridPane.rowIndex="10" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #990000;" text="rojo" textFill="WHITE" GridPane.rowIndex="11" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #FF99CC;" text="rosa" GridPane.rowIndex="12" />
+            <Label fx:id="botonNegro" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#cambiarColorPorBotonNegro" style="-fx-background-color: #000000;" text="negro" textAlignment="CENTER" textFill="WHITE" />
+            <Label fx:id="botonGrisOscuro" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #585858;" text="gris oscuro" textFill="WHITE" GridPane.rowIndex="1" />
+            <Label fx:id="botonGris" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #848484;" text="gris" textFill="WHITE" GridPane.rowIndex="2" />
+            <Label fx:id="botonGrisClaro" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #D5D5D5;" text="gris claro" GridPane.rowIndex="3" />
+            <Label fx:id="botonBlanco" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="blanco" GridPane.rowIndex="4" />
+            <Label fx:id="botonMagenta" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #FF66FF;" text="magenta" GridPane.rowIndex="5" />
+            <Label fx:id="botonAzul" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0033FF F;" text="azul" textFill="WHITE" GridPane.rowIndex="6" />
+            <Label fx:id="botonCian" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0099FF;" text="cian" GridPane.rowIndex="7" />
+            <Label fx:id="botonVerde" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #33CC00;" text="verde" GridPane.rowIndex="8" />
+            <Label fx:id="botonAmarillo" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #FFCC00;" text="amarillo" GridPane.rowIndex="9" />
+            <Label fx:id="botonNaranja" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="74.0" style="-fx-background-color: #FF9900;" text="naranja" GridPane.rowIndex="10" />
+            <Label fx:id="botonRojo" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #990000;" text="rojo" textFill="WHITE" GridPane.rowIndex="11" />
+            <Label fx:id="botonRosa" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #FF99CC;" text="rosa" GridPane.rowIndex="12" />
          </children>
       </GridPane>
    </right>
@@ -85,4 +87,7 @@
          </children>
       </GridPane>
    </bottom>
+   <center>
+      <Pane fx:id="PanelCentral" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
