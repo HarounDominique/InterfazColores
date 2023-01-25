@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.interfazcolores.HelloController">
    <left>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -15,9 +16,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ScrollBar orientation="VERTICAL" />
-            <ScrollBar orientation="VERTICAL" GridPane.columnIndex="1" />
-            <ScrollBar orientation="VERTICAL" GridPane.columnIndex="2" />
+            <ScrollBar fx:id="ScrollBarRojo" onDragDetected="#cambiarValorScrollBarRojo" orientation="VERTICAL" value="100.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ScrollBar>
+            <ScrollBar fx:id="ScrollBarVerde" orientation="VERTICAL" value="100.0" GridPane.columnIndex="1" />
+            <ScrollBar fx:id="ScrollBarAzul" orientation="VERTICAL" value="100.0" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </left>
@@ -73,11 +77,11 @@
         </rowConstraints>
          <children>
             <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #990000;" text="rojo" textFill="WHITE" />
-            <Label text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="valorRojo" text="0" GridPane.columnIndex="1" />
             <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #33CC00;" text="verde" GridPane.columnIndex="2" />
-            <Label text="Label" GridPane.columnIndex="3" />
+            <Label fx:id="valorVerde" text="0" GridPane.columnIndex="3" />
             <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #0033FF F;" text="azul" textFill="WHITE" GridPane.columnIndex="4" />
-            <Label text="Label" GridPane.columnIndex="5" />
+            <Label fx:id="valorAzul" text="0" GridPane.columnIndex="5" />
          </children>
       </GridPane>
    </bottom>
